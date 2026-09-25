@@ -2,7 +2,7 @@
 
 Un CV numérique interactif et entièrement responsive développé dans le cadre du Bootcamp Web d'Epitech. Ce projet met en valeur mon parcours, mes compétences techniques (Python, C, PHP, Linux) et mes projets.
 
-## 🚀 Fonctionnalités
+## Fonctionnalités
 
 - **Design 100% Responsive :** Interface fluide s'adaptant à tous les écrans (méthode de *Safe Centering* et de conteneurs flexibles).
 - **Éléments Interactifs :** 
@@ -12,7 +12,7 @@ Un CV numérique interactif et entièrement responsive développé dans le cadre
 - **Formulaire de contact :** Interface de prise de contact intégrée.
 - **Code Structuré :** Séparation claire entre la structure (HTML), le style (CSS) et l'interactivité (JS).
 
-## 🛠️ Technologies Utilisées
+## Technologies Utilisées
 
 - HTML5
 - CSS3 (Variables CSS, Flexbox, Grid, Media Queries)
