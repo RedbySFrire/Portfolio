@@ -16,7 +16,6 @@ Un CV numérique interactif et entièrement responsive développé dans le cadre
 
 - HTML5
 - CSS3 (Variables CSS, Flexbox, Grid, Media Queries)
-- JavaScript (Vanilla)
 
 ## 📂 Structure du Projet
 
