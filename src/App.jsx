@@ -159,7 +159,7 @@ export default function App() {
                       <span>RANG S</span>
                     </div>
                     <img 
-                      src="/Profile/profile.jpg" 
+                      src="./Profile/profile.jpg" 
                       alt="Portrait de Florian Chen" 
                       onError={(e) => { e.target.src = "https://api.dicebear.com/9.x/bottts-neutral/svg?seed=Florian"; }}
                       className="w-64 h-64 object-cover border-2 border-zzz-black grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300"
