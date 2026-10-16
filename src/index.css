@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0A0A0C;
+  color: #FFFFFF;
+  font-family: 'Chakra Petch', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Texture de points façon Manga / ZZZ */
+.bg-halftone {
+  background-image: radial-gradient(#27272A 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}
+
+/* Lignes d'écran cathodique (CRT Scanlines) */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Bandeau de texte défilant infini */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 18s linear infinite;
+}
