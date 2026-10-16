@@ -10,7 +10,7 @@ Un portfolio interactif et dynamique inspiré par l'esthétique urbaine et cyber
 
 ## 🛠️ Stack Technique & Outils
 
-- **Cœur du projet :** React (v18) propulsé par Vite.
+- **Cœur du projet :** React (v19) propulsé par Vite.
 - **Stylisation :** Tailwind CSS (v3) pour une intégration rapide via des classes utilitaires.
 - **Animations :** Framer Motion pour des animations basées sur la physique.
 - **Iconographie :** Lucide React.
