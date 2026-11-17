@@ -1,7 +1,7 @@
 export const EDUCATION_DATA = [
   {
     year: "2026 / 2027",
-    degree: "Pré-MSc Pro (BAC +3)",
+    degree: "Année Master of Science (3 ans)",
     school: "École Epitech Paris",
     status: "EN COURS",
     details: ["Bootcamp Web", "Java (en cours)", "Projet Job Board (Django / DRF)"],
