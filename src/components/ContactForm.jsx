@@ -13,18 +13,21 @@ const MESSAGES = {
 };
 
 export default function ContactForm() {
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [status, setStatus] = useState("idle");
 
   async function handleSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
 
-    // Champ piège anti-spam (honeypot)
-    if (data.get("website")) return;
+    // Vérification anti-spam
+    if (data.get("botcheck")) return;
 
+    // Métadonnées Web3Forms pour un email propre
     data.append("access_key", WEB3FORMS_KEY);
-    data.append("subject", `Portfolio ZZZ - Message de ${data.get("name")}`);
+    data.append("from_name", "Portfolio Florian Chen");
+    data.append("subject", `[Portfolio] Nouveau message de ${data.get("name")}`);
+    data.append("replyto", data.get("email"));
 
     setStatus("sending");
     try {
@@ -58,11 +61,8 @@ export default function ContactForm() {
         <textarea id="contact-message" name="message" required rows="5" className={fieldClass} />
       </div>
 
-      {/* Champ piège anti-spam invisible */}
-      <div className="absolute -left-[9999px]" aria-hidden="true">
-        <label htmlFor="contact-website">Ne pas remplir</label>
-        <input id="contact-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
-      </div>
+      {/* Champ anti-spam natif Web3Forms (ignoré dans l'email reçu) */}
+      <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
       <button
         type="submit"
