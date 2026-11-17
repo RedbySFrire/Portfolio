@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0A0A0C;
+  color: #FFFFFF;
+  font-family: 'Chakra Petch', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Focus clavier bien visible sur tous les éléments interactifs */
+:focus-visible {
+  outline: 3px solid #00F0FF;
+  outline-offset: 3px;
+}
+
+/* Texture de points façon Manga / ZZZ */
+.bg-halftone {
+  background-image: radial-gradient(#27272A 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}
+
+/* Lignes d'écran cathodique (CRT Scanlines), volontairement très discrètes pour ne pas gêner la lecture */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.2) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Bandeau de texte défilant infini */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 18s linear infinite;
+}
+
+/* Gros libellés décoratifs : affichés via CSS (data-deco) pour ne pas compter comme du texte à lire */
+.deco::after {
+  content: attr(data-deco);
+}
+
+/* Respect des préférences d'accessibilité du système */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .scanlines {
+    display: none;
+  }
+  .bg-halftone {
+    background-image: none;
+  }
+}

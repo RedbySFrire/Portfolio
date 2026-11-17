@@ -1,0 +1,45 @@
+// Chaque projet indique : contexte, objectif, rôle, compétences et technologies.
+// Ajoute `image` (chemin dans public/) + `imageAlt` pour afficher une capture d'écran,
+// et `links` pour pointer vers le code ou une démo.
+export const PROJECTS_DATA = [
+  {
+    title: "Job Board",
+    status: "EN COURS",
+    period: "2026",
+    context: "Projet Epitech (T-WEB-501) réalisé en équipe : je m'occupe du back-end, un camarade du front-end.",
+    objective: "Plateforme d'offres d'emploi : les entreprises publient et gèrent leurs annonces, les candidats postulent avec ou sans compte.",
+    role: "Conception et développement de l'API : espace entreprise (inscription, connexion, annonces, candidatures reçues), candidature sans compte via un compte invité avec token et limitation d'appels, suppression de compte, back-office administrateur.",
+    skills: ["Python", "Django", "Django REST Framework", "SQLite", "API REST", "Authentification par token"],
+    links: [],
+  },
+  {
+    title: "Smart Gate Jaurès",
+    status: "TERMINÉ",
+    period: "2025 / 2026",
+    context: "Projet de fin de BTS CIEL au lycée Jean Jaurès, en groupe : j'ai été l'architecte back-end, d'autres élèves s'occupaient de l'ESP32 et des capteurs.",
+    objective: "Contrôler l'accès à l'établissement par badge RFID, avec une supervision et une administration à distance.",
+    role: "Base de données MariaDB (8 tables), API REST en PHP sécurisée (mots de passe hachés avec bcrypt, requêtes préparées), interface web d'administration avec déconnexion sur inactivité, accès distant par VPN Tailscale avec gestion des rôles, serveur sur Raspberry Pi 5, planification avec Gantt Project.",
+    skills: ["MariaDB", "PHP", "API REST", "Sécurité web", "Tailscale (VPN)", "Raspberry Pi", "ESP32"],
+    links: [],
+  },
+  {
+    title: "Mission My Business Life",
+    status: "TERMINÉ",
+    period: "2025 / 2026",
+    context: "Mission professionnelle en tant que concepteur développeur web chez My Business Life.",
+    objective: "Concevoir et mettre en service une application web complète.",
+    role: "Développement avec le framework Django, création et gestion de la base de données SQL, déploiement par conteneur sur un NAS QNAP, diagnostic et résolution de pannes.",
+    skills: ["Python", "Django", "SQL", "Conteneurs", "NAS QNAP", "Dépannage"],
+    links: [],
+  },
+  {
+    title: "Portfolio personnel",
+    status: "EN COURS",
+    period: "2026",
+    context: "Projet personnel, également déposé comme rendu Epitech (T-ENT-500).",
+    objective: "Présenter mon parcours, mes projets et mes compétences dans un site accessible et lisible sur mobile comme sur ordinateur.",
+    role: "Conception, design (thème inspiré de Zenless Zone Zero), développement et déploiement : composants React découpés par page, navigation par URL, formulaire de contact, accessibilité au clavier et contrastes.",
+    skills: ["React 19", "Vite", "Tailwind CSS", "Framer Motion", "GitHub Pages", "Accessibilité (WCAG)"],
+    links: [{ label: "Code source", href: "https://github.com/RedbySFrire/Portfolio" }],
+  },
+];
